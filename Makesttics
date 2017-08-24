@@ -1,0 +1,14 @@
+#makefile for sttics
+
+
+SRCS =  sttics.c getpar.c
+
+OBJS =  sttics.o getpar.o
+
+INCL = /usr/include/stdio.h /usr/include/sgtty.h /usr/include/sys/ioctl.h
+
+a.out: ${OBJS} ${INCL}
+	cc -o sttics ${OBJS}
+
+sttics.o: ${INCL}
+getpar.o: ${INCL}

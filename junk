@@ -1,0 +1,12 @@
+plane 0 90
+plane 90 90
+size line 30
+symbol line < <
+line 0 90
+symbol line > >
+line 0 90
+symbol line | |
+line 0 90
+small 0 90 20
+small 0 90 15
+small 0 90 10

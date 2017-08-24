@@ -1,0 +1,5 @@
+title font check
+pointsize text 16
+text 280 5 : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+text 270 5 : a;c:cbcdefghijklmnopqrstuvwxyz)!#$%^&*(-+=.,<>/\?|{}[];:
+text 260 5 : AaBbCcDdEeFfGgHhJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz

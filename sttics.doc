@@ -1,0 +1,57 @@
+.RT
+.ce 2
+A Users manual for
+STTICS
+.SH
+Introduction
+.PP
+Sttics is a program for making a tics on a stereonet.
+Sttics makes onnet input files and can be used in conjunction with
+your own input files.
+.PP
+The author is Andrew Michael (andy@erebus).
+.SH
+Usage
+.PP
+The usage is: sttics [options] where the options are:
+.br
+out=file, where file is the output file.
+The default is stdout.
+.br
+error=file, where file is the error file.
+The default is stderr.
+.br
+azstep=float, where the floating number is the step size in degrees
+in the azimuth of the tics.  The default is 10.
+.br
+plgstep=float, where the floating number is the step size in degrees
+in the plunge of the tics.  The default is 10.
+.br
+radius=float, where the floating number is the radius of the stereonet
+in cm.  The default is 4cm.
+.br
+type=string, where the string is the type of projection to be used,
+and is either schmidt or wulff, the default is schmidt.
+.SH
+Some examples
+.PP
+On the following pages are the results of these commands:
+.br
+sttics | onnet | ipen
+.br
+sttics type=wulff | onnet | ipen
+.br
+sttics azstep=30 plgstep=45 | onnet | ipen   ,and
+.br
+sttics azstep=30 plgstep=30 | onnet file | ipen
+.br
+The last is useful to overlay the tics onto the plot in file.
+The contents of the file was:
+.br
+title Example
+.br
+fatness line 3
+.br
+size line 8
+.br
+line 10 20

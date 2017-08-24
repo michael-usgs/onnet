@@ -1,0 +1,58 @@
+.RT
+.ce 2
+A Users manual for
+STNET
+.SH
+Introduction
+.PP
+Stnet is a program for making a standard stereonet with planes
+striking N-S and small circles about the horizontal N-S axis.
+Stnet makes onnet input files and can be used in conjunction with
+your own input files.
+.PP
+The author is Andrew Michael (andy@erebus).
+.SH
+Usage
+.PP
+The usage is: stnet [options] where the options are:
+.br
+out=file, where file is the output file.
+The default is stdout.
+.br
+error=file, where file is the error file.
+The default is stderr.
+.br
+gcstep=float, where the floating number is the step size in degrees
+between planes.  The default is 10.
+.br
+scstep=float, where the floating number is the step size in degrees
+between small circles.  The default is 10.
+.br
+radius=float, where the floating number is the radius of the stereonet
+in cm.  The default is 4cm.
+.br
+type=string, where the string is the type of projection to be used,
+and is either schmidt or wulff, the default is schmidt.
+.SH
+Some examples
+.PP
+On the following pages are the results of these commands:
+.br
+stnet | onnet | ipen
+.br
+stnet type=wulff | onnet | ipen
+.br
+stnet gcstep=30 scstep=45 | onnet | ipen   ,and
+.br
+stnet gcstep=30 scstep=30 | onnet file | ipen
+.br
+The last is useful to overlay the stereonet onto the plot in file.
+The contents of the file was:
+.br
+title Example
+.br
+fatness line 3
+.br
+size line 8
+.br
+line 10 20

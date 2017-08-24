@@ -1,0 +1,28 @@
+title All of Onnet
+through
+radius 5.
+line 20 30
+line 20 -20
+symbol line 1 2
+fatness line 3
+line 30 30
+#note that the label on the next line starts with a space
+#this is to make it put the label to the left of the point
+text 30 30 : label this point
+line 30 -20
+pole 45 60
+size pole 8.
+color pole 3
+pole 45 20
+reflect
+fat 0
+plane 190 45
+fatness rake 3
+size rake 5.
+rake 260
+small 340 10 15
+through
+small 320 10 15
+great 180 10 200 30
+move 270 20
+draw 280 10

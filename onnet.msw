@@ -1,0 +1,152 @@
+
+
+A Users Manual for ONNET Stereonets Made Easy 
+Introduction 
+Onnet is an easy to use program that allows the plotting of various structural information on stereonets.  It is designed so the input files are easy to read and edit by the user.  This facilitates it's use in two ways.  Field data can be plotted by making an onnet input file with the editor, or programs that compute information can write onnet input files.  Onnet is then used to translate these English language files into a plot file that can then be displayed on the screen or on the imagen or any other plotting device.  One of the nicest things about onnet is that you can edit a plot with it. For instance you plot a bunch of field data, later you can add interpretation symbols to the plot with little extra effort.  Also the symbols used to plot data, or the way it is viewed can also be changed with little effort.  When a number is specified in an onnet command or viewing parameter it may either be an integer or a real number, and parts of commands can be separated by either any number of spaces or tabs. 
+You should also be aware of the programs stnet and sttics that draw a standard stereonet or tics on a stereonet for use with onnet. 
+Onnet was written by Andy Michael of the Geophysics department, with the algorithm for small circles cribbed from Paul Layer.  It was written in such a way as to make adding features easy.  So if it doesn't do something you want, please tell me by sending mail to andy@erebus.  However, remember that onnet is a plotting program.  It plots data or results; it does not, and should not, perform manipulations on the data.  Thus suggestions that onnet should compute rotations or contour data are not likely to be acted upon.  However programs that do these could very easily plot their output by writing onnet input files. 
+An Example 
+To get the idea of how onnet works here's an example onnet input file: 
+title Example 
+plane 20 30 
+pole 20 30. 
+line 270 55 
+Let's assume that these four lines are in a file called "input", to make a plot we then give the command: 
+% onnet input > plot 
+To view the plot we can then use pen, penpr, ret, ctek, ... as in: 
+% ipen plot 
+to print the plot out on the imagen.  It is shown on the next page. This plot will be titled Example and show on a stereonet a plane with dip direction 20 degrees east of north and dip 30 degrees, an "o" at the pole to this plane, and an "x" marking a lineation trending 270 degrees east of north and plunging 55 degrees.  The one concession to using a computer to do your plotting is the use of dip directions instead of strikes.  The reason for this is that strikes are ambiguous by 180 degrees, and you need to have a letter in the dip which is hard to interpret.  (e.g. A plane striking 30 degrees E of N and dipping 60 degrees E becomes dip direction=120 degrees and dip= 60 degrees.) 
+Input to onnet follows GeoToolKit standards, it can take multiple input files and will make ONE plot out of them.  The files are processed in the following order: standard input, in=, other files. The following will do the same thing: 
+onnet < input | ret 
+onnet in=input | ret 
+onnet input | ret 
+In addition the output file can be specified with out=file, and the error can be specified with error=file. i.e. 
+onnet in=input out=output error=junk 
+onnet in=file2 file3 < file1 | ret 
+will process the files in the order file1, file2, file3 and pipe the output to the ret plotting filter. 
+Onnet Input Files 
+This section is the meat of the documentation, it tells you everything onnet can do, and how to structure an input file.  Input lines in onnet files are divided into viewing parameters and commands and comment lines.  In general they can be in any order, except that the order is important for viewing parameters.  A viewing parameter will affect anything that comes after it, it will have no affect on any command that comes before it.  Note that most commands and viewing parameters have long and short names, they can be used interchangeably. 
+
+Viewing Parameters 
+radius x 
+radius changes the radius of the plot to x centimeters.  This is the most constrained command because it must come before any commands that actually draw things (plane, pole, rake, line, small, move, draw, great).  You should give it at the top of the file.  The default is 4 cm.  The short form of the command is r. 
+
+fatness choice n 
+fatness changes the thickness of the lines or symbols for the command choice to n.  I.e. fatness line 3 will change all later lines to be plotted with fat=3 symbols.  The possible choices are: plane, pole, rake small, move, draw, title, great, and circle.  circle is not a command but will affect the thickness of the outline of the stereonet. fatness circle must be called before any commands that actually draw things if it is to work.  The short name is f. 
+fat n 
+fat changes the thickness of the lines and symbols used to n, the thinest possible line is fat 0, and this is the default.  The fat command can be given at ANY line in the file.  It affects all elements of the plot and exists largely for backwards compatibility.  New files should use the fatness command. 
+color choice n 
+color changes the color that the lines or symbols for the command choice to n.  The interger n is translated to a color by the graphics package (see the vplot documentation for more info). (The current color definitions (9/26/86) are black 0, blue 1, red 2, purple 3, green 4, skyblue 5, yellow 6, and white 7.) For example: color line 3 will make all later lines purple. The possible choices are: plane, pole, rake, small, move, draw, title, great, and circle.  circle is not a command, but it will affect the color of the outline of the stereonet.  color circle must be called before any commands that actually draw things if it is to work.  The short name is c. 
+reflect 
+causes all information on the upper hemisphere to be reflected about the center of the sphere and plotted on the lower hemisphere.  This is the default, if neither reflect or through are specified reflect will be used. 
+through 
+causes all information on the upper hemisphere to be plotted as if you were above the sphere and were looking down onto the lower hemisphere.  The viewing type may be changed at ANY line at the file after the title, although it is rare you will want to, so it will probably be given once (if it all) near the top. 
+schmidt 
+causes the Schmidt equal-area projection to be used for all items after it is called.  It is the default and will be used if neither schmidt or wulff are called. 
+wulff 
+causes the Wulff equal-angle projection to be used for all items after it is called.  The projection can be changed at any time, but it is rare that you will want to, so either schmidt or wulff should be specified once at the top, if at all. The only time you might want to change within a file is if you are trying to demonstrate the effects of the two projections. 
+focal 
+causes all plunges after the command to be interpreted as take-off angles which are 0 at vertical down, 90 at horizontal, and 180 at vertical up. This affects the line, text, small, move, draw, and great commands. The default is notfocal. 
+notfocal 
+causes all plunges after the command to be determined as plunges. This is the default.  notfocal will rarely be called, and usually only if focal was called earlier in the file. 
+size choice x 
+size changes the size of the symbols for the command choice to x.  The default size is 3, so to make the poles plot larger you might give the command "size pole 6".  Possible choices are pole, line, rake, and title.  (Note the default for title is 10.).  The short name is sz. 
+symbol choice l u 
+symbol changes the symbols used to plot the command choice. l is the symbol used on the lower hemisphere, u on the upper hemisphere.  Possible choices are pole, line, and rake.  Only the lower hemisphere symbol is used for pole because all poles are plotted on the lower hemisphere.  Defaults are pole 'o', line 'x' and 's', and rake '+' and '*'.  The short name is sy. 
+
+Commands 
+plane ddir dip 
+causes a plane to be drawn on the plot with dip direction ddir, and dip dip.  The short name is p. 
+
+pole ddir dip 
+causes the pole to a plane with dip direction ddir, and dip dip to be plotted.  Poles are all on the lower hemisphere and are denoted with an "o".  The short name is po. The symbols can be changed with the symbol command, their size can be changed with the size command. 
+rake slip_angle 
+rake causes a character to be plotted denoting the slip vector on a fault.  Rake must come directly after either plane or pole, because the slip vector is constrained to be in the plane.  rake can also follow itself to allow plotting multiple slip vectors on one plane, or w.r.t. one pole.  Rakes on the upper hemisphere (thrusts) are plotted by "*", and on the lower hemisphere (normal faults) "+" is used.  The slip angle is measured within the plane, on the foot wall, from horizontal such that 0 degrees represents a left handed strike slip fault.  90 is a pure thrust, 180 a right handed strike slip, and 270 a pure normal fault.  These represent the  standard seismology conventions. The symbols can be changed with the symbol command, their size can be changed with the size command. The short name is rk. 
+line trend plg 
+causes a character to be plotted to denote a line (i.e a lineation or magnetic pole) with direction trend and plunge plg.  For lines on the lower hemisphere (positive plunges) an "x" is plotted, on the upper hemisphere "s" is plotted. The symbols can be changed with the symbol command, their size can be changed with the size command. The short name is l. 
+small trend plg dist 
+causes a small circle to be drawn with it's center at the point trend, plg with radius given in degrees by dist. The short name is s. 
+great trend1 plunge1 trend2 plunge2 
+great draws a great circle segment connecting the point trend1 plung1 and trend2 plunge2.  It does not do well if reflect viewing is used and the great circle segment crosses from the upper hemisphere to the lower hemisphere.  The short name is g. 
+move trend plunge 
+move moves the pen (without drawing) to the point with direction trend and plunge plunge. The short name is m. 
+draw trend plunge 
+draw draws from the last point to trend plunge.  It can only be given after move or draw.  move and draw are useful to draw shapes onnet does not know about (yet?).  The short name is d.  The short name is m. 
+text trend plunge :string 
+text posts the string of text at the point trend plunge.  The first character of the string will be positioned so that if it is a capital letter it will be centered on the given point.  The string starts immediately after the colon and can include spaces (and even start with a colon). The short name is t. 
+title rest of line 
+Sets the title of the plot to be whatever is the rest of the line. The title is plotted last so it can be specified anywhere within the file, but only once.  For backwards compatibility if onnet does not understand the first line of the file it becomes the title. 
+Comment lines 
+# Rest of line. 
+Any line beginning with a '#' is a comment line. 
+A Big example 
+Try copying the following into a file and play with it.  It should give  you an idea of onnet's capabilities.  What should come out is shown on the next page. 
+title All of Onnet 
+through 
+radius 5. 
+line 20 30 
+line 20 -20 
+# a meaningless comment line 
+symbol line 1 2 
+fatness line 3 
+line 30 30 
+text 30 30 :label this point 
+line 30 -20 
+pole 45 60 
+size pole 8. 
+color pole 3 
+pole 45 20 
+reflect 
+fat 0 
+plane 190 45 
+fatness rake 3 
+size rake 5. 
+rake 260 
+small 340 10 15 
+through 
+small 320 10 15 
+great 180 10 200 30 
+move 270 20 
+draw 280 10 
+
+A final example comes from my own work.  Here is the file: 
+fatness circle 1 
+fatness plane 1 
+fatness rake 2 
+r 5. 
+fatness title 3 
+title Slickensides 
+
+
+p     135.00      61.00 
+rk     -80.00 
+p     126.00      59.00 
+rk    -100.00 
+p       0.00      80.00 
+rk     -58.00 
+p     322.00      68.00 
+rk     -78.00 
+p     315.00      63.00 
+rk     -78.00 
+p      20.00      88.00 
+rk     -59.00 
+p     344.00      78.00 
+rk     -65.00 
+p     136.00      60.00 
+rk    -100.00 
+p     347.00      61.00 
+rk     -94.00 
+p     157.00      56.00 
+rk     -88.00 
+p     139.00      70.00 
+rk    -111.00 
+p     306.00      50.00 
+rk     -94.00 
+The plot is on the next page. 
+Backwards compatibility 
+I have attempted to make this version of onnet completely backwards compatible with the older version.  However older users might be advised to use the new features: comment lines, better fat control, great circle segments, and Wulff projections.  In addition the title command makes the file format somewhat freer.  The addition of abbreviated command names should also make files easier to deal with (although harder to read). 
+Features already on the list to be added: 
+
+Area filled beach ball focal mechanisms. 
+Orthogonal plane pairs from ddir, dip, and rake. 
+Variable linetypes for plane, great, and small. 

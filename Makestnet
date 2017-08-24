@@ -1,0 +1,15 @@
+#makefile for stnet
+
+
+SRCS =  stnet.c getpar.c
+
+OBJS =  stnet.o getpar.o
+
+INCL = /usr/include/stdio.h /usr/include/sgtty.h /usr/include/sys/ioctl.h
+
+
+a.out: ${OBJS} ${INCL}
+	cc -o stnet ${OBJS}
+
+stnet.o: ${INCL}
+getpar.o: ${INCL}

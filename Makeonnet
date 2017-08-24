@@ -1,0 +1,21 @@
+#makefile for onnet
+
+SRCS =  onnet.c dirplg.c center.c
+
+OBJS =  onnet.o dirplg.o center.o
+
+INCL = /usr/include/stdio.h  /usr/include/math.h /usr/include/sgtty.h \
+       /usr/include/sys/ioctl.h
+
+LIBS = /we/michael/GMT/src/libpsl.a /we/michael/GMT/src/libgmt.a /we/michael/GMT/NETCDF/lib/libnetcdf.a
+
+CFLAGS= -O -I/we/michael/GMT/src -I/we/michael/GMT/NETCDF/include
+
+.c.o:; cc -c ${CFLAGS} $*.c
+
+a.out: ${OBJS} ${INCL}
+	cc ${CFLAGS} -o onnet ${OBJS} ${LIBS} -lm
+
+onnet.o: $(INCL)
+dirplg.o: $(INCL)
+center.o: $(INCL)

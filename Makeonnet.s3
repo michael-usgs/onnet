@@ -1,0 +1,22 @@
+#makefile for onnet
+
+SRCS =  onnet.c dirplg.c center.c getpar.c
+
+OBJS =  onnet.o dirplg.o center.o getpar.o
+
+INCL = /usr/include/stdio.h  /usr/include/math.h /usr/include/sgtty.h \
+       /usr/include/sys/ioctl.h
+
+LIBS = /we/michael/vplot/vplot/lvplot/libvplot.a
+
+CFLAGS= -O -f68881
+
+.c.o:; cc -c ${CFLAGS} $*.c
+
+a.out: ${OBJS} ${INCL}
+	cc ${CFLAGS} -o onnet ${OBJS} ${LIBS} -lm
+
+onnet.o: $(INCL)
+dirplg.o: $(INCL)
+center.o: $(INCL)
+getpar.o: $(INCL)

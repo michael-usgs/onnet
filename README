@@ -1,0 +1,23 @@
+The makefiles in this directory are set up to run with a library
+called loc that is local to Stanford Earth Sciences.  The directory
+needed to make this directory is in this directory and is called
+LOCAL.  It also has a makefile in it to make the library and may
+need some modification to run on your machine.  Other than that you
+have to replace the graphics calls in onnet.c and center.c
+with your own graphics library.  The calls are:
+		fat(title.fat);  which sets the fatness of lines or symbols
+	utext(titlex,titley,symsz,0,cap); which places text (also in center.c)
+	vpfilep(out_file); sets the file pointer for graphics output
+	orig(z,z); sets the origin in plot coordinates
+	scale(1.,1.); sets the scales
+	uorig(0.,0.); sets the user origin
+	uclip(-z,-z,z,z+1.+(z/10.)); sets the limits to clip on
+			umove (x,y); move in user coordinates 
+			udraw (x,y); draw in user coordinates
+			where (&xc,&yc); where is pen in screen coordinates
+			text(xc-cwd2,yc-chd2,symbsz,0,string); draw text
+
+text and utext are of the form
+(x_location,ylocation,size of symbol,0,string to put on plot)
+0 means text is in normal orientation (not upside down or something).
+				

@@ -1,0 +1,821 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 144 144
+%%Title: GMT v3.0 Document from onnet
+%%Creator: Andy Michael
+%%DocumentNeededResources: font Helvetica
+%%CreationDate: Wed Jan  6 18:00:37 1999
+%%Orientation: Portrait
+%%EndComments
+
+%%BeginProlog
+
+% Begin pslib header
+
+250 dict begin
+
+/A /setgray load def
+/B /setdash load def
+/C /setrgbcolor load def
+/D /rlineto load def
+/E {dup stringwidth pop} bind def
+/F /fill load def
+/G /rmoveto load def
+/L /lineto load def
+/M {stroke moveto} bind def
+/m {moveto} bind def
+/N /newpath load def
+/O {M {D} repeat P V C F U S} def
+/o {M {D} repeat P V A F U S} def
+/P /closepath load def
+/Q {M {D} repeat P V C F U N} def
+/q {M {D} repeat P V A F U N} def
+/t {M {D} repeat P S} def
+/R /rotate load def
+/S /stroke load def
+/T /translate load def
+/U /grestore load def
+/V /gsave load def
+/W /setlinewidth load def
+/X {M dup 0 D dup -0.5 mul dup G 0 exch D S} bind def
+/Y {findfont exch scalefont setfont} bind def
+/Z /show load def
+/A0 {0 exch M 0 D D D D D 0 D P V A F U N} bind def
+/A1 {0 exch M 0 D D D D D 0 D P V A F U S} bind def
+/A2 {0 exch M 0 D D D D D 0 D P V C F U N} bind def
+/A3 {0 exch M 0 D D D D D 0 D P V C F U S} bind def
+/A4 {0 exch M 0 D D D D D 0 D P S} bind def
+/C0 {0 360 arc V A F U N} bind def
+/C1 {0 360 arc V A F U S} bind def
+/C2 {0 360 arc V C F U N} bind def
+/C3 {0 360 arc V C F U S} bind def
+/C4 {0 360 arc S} bind def
+/D0 {M 5 {dup} repeat D neg exch D neg exch neg D P V A F U N} bind def
+/D1 {M 5 {dup} repeat D neg exch D neg exch neg D P V A F U S} bind def
+/D2 {M 5 {dup} repeat D neg exch D neg exch neg D P V C F U N} bind def
+/D3 {M 5 {dup} repeat D neg exch D neg exch neg D P V C F U S} bind def
+/D4 {M 5 {dup} repeat D neg exch D neg exch neg D P S} bind def
+/R0 {M dup 0 D exch 0 exch D neg 0 D P V A F U N} bind def
+/R1 {M dup 0 D exch 0 exch D neg 0 D P V A F U S} bind def
+/R2 {M dup 0 D exch 0 exch D neg 0 D P V C F U N} bind def
+/R3 {M dup 0 D exch 0 exch D neg 0 D P V C F U S} bind def
+/R4 {M dup 0 D exch 0 exch D neg 0 D P S} bind def
+/S0 {M dup dup 0 D 0 exch D neg 0 D P V A F U N} bind def
+/S1 {M dup dup 0 D 0 exch D neg 0 D P V A F U S} bind def
+/S2 {M dup dup 0 D 0 exch D neg 0 D P V C F U N} bind def
+/S3 {M dup dup 0 D 0 exch D neg 0 D P V C F U S} bind def
+/S4 {M dup dup 0 D 0 exch D neg 0 D P S} bind def
+/T0 {M dup 0 D dup -0.5 mul exch 0.866025 mul D P V A F U N} bind def
+/T1 {M dup 0 D dup -0.5 mul exch 0.866025 mul D P V A F U S} bind def
+/T2 {M dup 0 D dup -0.5 mul exch 0.866025 mul D P V C F U N} bind def
+/T3 {M dup 0 D dup -0.5 mul exch 0.866025 mul D P V C F U S} bind def
+/T4 {M dup 0 D dup -0.5 mul exch 0.866025 mul D P S} bind def
+/I0 {M dup 0 D dup -0.5 mul exch -0.866025 mul D P V A F U N} bind def
+/I1 {M dup 0 D dup -0.5 mul exch -0.866025 mul D P V A F U S} bind def
+/I2 {M dup 0 D dup -0.5 mul exch -0.866025 mul D P V C F U N} bind def
+/I3 {M dup 0 D dup -0.5 mul exch -0.866025 mul D P V C F U S} bind def
+/I4 {M dup 0 D dup -0.5 mul exch -0.866025 mul D P S} bind def
+/E0 {V T dup 0 exch M 0.726542528 mul -72 R dup 0 D 4 {72 R dup 0 D -144 R dup 0 D} repeat pop P V A F U N U} bind def
+/E1 {V T dup 0 exch M 0.726542528 mul -72 R dup 0 D 4 {72 R dup 0 D -144 R dup 0 D} repeat pop P V A F U S U} bind def
+/E2 {V T dup 0 exch M 0.726542528 mul -72 R dup 0 D 4 {72 R dup 0 D -144 R dup 0 D} repeat pop P V C F U N U} bind def
+/E3 {V T dup 0 exch M 0.726542528 mul -72 R dup 0 D 4 {72 R dup 0 D -144 R dup 0 D} repeat pop P V C F U S U} bind def
+/E4 {V T dup 0 exch M 0.726542528 mul -72 R dup 0 D 4 {72 R dup 0 D -144 R dup 0 D} repeat pop P S U} bind def
+/H0 {V T dup dup 0.5 mul exch 0.866025404 mul M 5 {-60 R dup 0 D} repeat pop P V A F U N U} bind def
+/H1 {V T dup dup 0.5 mul exch 0.866025404 mul M 5 {-60 R dup 0 D} repeat pop P V A F U S U} bind def
+/H2 {V T dup dup 0.5 mul exch 0.866025404 mul M 5 {-60 R dup 0 D} repeat pop P V C F U N U} bind def
+/H3 {V T dup dup 0.5 mul exch 0.866025404 mul M 5 {-60 R dup 0 D} repeat pop P V C F U S U} bind def
+/H4 {V T dup dup 0.5 mul exch 0.866025404 mul M 5 {-60 R dup 0 D} repeat pop P S U} bind def
+/P0 {arc P V A F U N} bind def
+/P1 {arc P V A F U S} bind def
+/P2 {arc P V C F U N} bind def
+/P3 {arc P V C F U S} bind def
+/P4 {arc P S} bind def
+/a {P V A F U N} def
+/b {P V A F U S} def
+/c {P V C F U N} def
+/d {P V C F U S} def
+/p {P S} def
+/F0 {/Helvetica Y} bind def
+/F1 {/Helvetica-Bold Y} bind def
+/F2 {/Helvetica-Oblique Y} bind def
+/F3 {/Helvetica-BoldOblique Y} bind def
+/F4 {/Times-Roman Y} bind def
+/F5 {/Times-Bold Y} bind def
+/F6 {/Times-Italic Y} bind def
+/F7 {/Times-BoldItalic Y} bind def
+/F8 {/Courier Y} bind def
+/F9 {/Courier-Bold Y} bind def
+/F10 {/Courier-Oblique Y} bind def
+/F11 {/Courier-BoldOblique Y} bind def
+/F12 {/Symbol Y} bind def
+/F13 {/AvantGarde-Book Y} bind def
+/F14 {/AvantGarde-BookOblique Y} bind def
+/F15 {/AvantGarde-Demi Y} bind def
+/F16 {/AvantGarde-DemiOblique Y} bind def
+/F17 {/Bookman-Demi Y} bind def
+/F18 {/Bookman-DemiItalic Y} bind def
+/F19 {/Bookman-Light Y} bind def
+/F20 {/Bookman-LightItalic Y} bind def
+/F21 {/Helvetica-Narrow Y} bind def
+/F22 {/Helvetica-Narrow-Bold Y} bind def
+/F23 {/Helvetica-Narrow-Oblique Y} bind def
+/F24 {/Helvetica-Narrow-BoldOblique Y} bind def
+/F25 {/NewCenturySchlbk-Roman Y} bind def
+/F26 {/NewCenturySchlbk-Italic Y} bind def
+/F27 {/NewCenturySchlbk-Bold Y} bind def
+/F28 {/NewCenturySchlbk-BoldItalic Y} bind def
+/F29 {/Palatino-Roman Y} bind def
+/F30 {/Palatino-Italic Y} bind def
+/F31 {/Palatino-Bold Y} bind def
+/F32 {/Palatino-BoldItalic Y} bind def
+/F33 {/ZapfChancery-MediumItalic Y} bind def
+/#copies 1 def
+
+%%EndProlog
+
+%%BeginSetup
+
+% Init coordinate system and scales
+% Scale is originally set to 0.0944882, which means that
+% 1 cm on the paper equals 300 Postscript units
+0.0944882 0.0944882 scale
+1800 1800 T
+S 0 A
+% End of pslib header
+%%EndSetup
+0 1500 M
+47 -1 D
+48 -2 D
+47 -4 D
+47 -5 D
+47 -7 D
+46 -8 D
+47 -9 D
+92 -24 D
+45 -14 D
+45 -16 D
+44 -16 D
+44 -19 D
+43 -19 D
+42 -21 D
+42 -22 D
+41 -24 D
+40 -25 D
+40 -26 D
+39 -27 D
+37 -29 D
+37 -30 D
+36 -30 D
+35 -32 D
+34 -34 D
+33 -34 D
+31 -35 D
+31 -36 D
+29 -37 D
+29 -38 D
+27 -39 D
+26 -40 D
+24 -40 D
+23 -41 D
+22 -42 D
+21 -43 D
+19 -43 D
+18 -44 D
+16 -45 D
+15 -44 D
+14 -46 D
+12 -46 D
+11 -46 D
+9 -46 D
+8 -47 D
+6 -47 D
+5 -47 D
+4 -47 D
+2 -47 D
+0 -48 D
+-1 -47 D
+-3 -47 D
+-4 -48 D
+-5 -47 D
+-8 -47 D
+-8 -46 D
+-10 -46 D
+-12 -46 D
+-13 -46 D
+-14 -45 D
+-16 -45 D
+-17 -44 D
+-18 -43 D
+-20 -43 D
+-22 -43 D
+-22 -41 D
+-24 -41 D
+-25 -40 D
+-27 -40 D
+-27 -38 D
+-29 -38 D
+-30 -36 D
+-31 -36 D
+-33 -35 D
+-33 -33 D
+-34 -33 D
+-36 -31 D
+-36 -30 D
+-37 -30 D
+-39 -28 D
+-39 -26 D
+-40 -26 D
+-40 -24 D
+-42 -23 D
+-42 -22 D
+-43 -20 D
+-43 -19 D
+-44 -17 D
+-45 -16 D
+-45 -15 D
+-45 -13 D
+-46 -12 D
+-46 -11 D
+-94 -16 D
+-47 -6 D
+-47 -4 D
+-47 -3 D
+-47 -2 D
+-48 0 D
+-47 2 D
+-47 3 D
+-47 4 D
+-47 6 D
+-94 16 D
+-46 11 D
+-46 12 D
+-45 13 D
+-45 15 D
+-45 16 D
+-44 17 D
+-43 19 D
+-43 20 D
+-42 22 D
+-42 23 D
+-40 24 D
+-40 26 D
+-39 26 D
+-39 28 D
+-37 30 D
+-36 30 D
+-36 31 D
+-34 33 D
+-33 33 D
+-33 35 D
+-31 36 D
+-30 36 D
+-29 38 D
+-27 38 D
+-27 40 D
+-25 40 D
+-24 41 D
+-22 41 D
+-22 43 D
+-20 43 D
+-18 43 D
+-17 44 D
+-16 45 D
+-14 45 D
+-13 46 D
+-12 46 D
+-10 46 D
+-8 46 D
+-8 47 D
+-5 47 D
+-4 48 D
+-3 47 D
+-1 47 D
+0 48 D
+2 47 D
+4 47 D
+5 47 D
+6 47 D
+8 47 D
+9 46 D
+11 46 D
+12 46 D
+14 46 D
+15 44 D
+16 45 D
+18 44 D
+19 43 D
+21 43 D
+22 42 D
+23 41 D
+24 40 D
+26 40 D
+27 39 D
+29 38 D
+29 37 D
+31 36 D
+31 35 D
+33 34 D
+34 34 D
+35 32 D
+36 30 D
+37 30 D
+37 29 D
+39 27 D
+40 26 D
+40 25 D
+41 24 D
+42 22 D
+42 21 D
+43 19 D
+44 19 D
+44 16 D
+45 16 D
+45 14 D
+92 24 D
+47 9 D
+46 8 D
+47 7 D
+47 5 D
+47 4 D
+48 2 D
+47 1 D
+0 300 D
+125 -125 D
+-125 125 D
+-125 -125 D
+ S
+363 997 M V 2.96e-323 R 64 F0 (x) Z U
+416 1143 M V 2.96e-323 R 64 F0 (s) Z U
+S 27 W
+530 919 M V 2.96e-323 R 64 F0 (1) Z U
+S 1 W
+530 919 M V 2.47e-323 R 64 F0 ( label this point ) Z U
+S 27 W
+608 1054 M V 2.96e-323 R 64 F0 (2) Z U
+S 1 W
+-751 -749 M V 2.96e-323 R 64 F0 (o) Z U
+S 0.627 0.125 0.941 C
+-261 -261 M V 2.96e-323 R 180 F0 (o) Z U
+S 0 A
+1478 -259 M
+-13 -16 D
+-13 -16 D
+-12 -16 D
+-14 -16 D
+-13 -16 D
+-13 -15 D
+-14 -15 D
+-14 -14 D
+-14 -15 D
+-15 -14 D
+-14 -13 D
+-15 -14 D
+-45 -39 D
+-16 -13 D
+-15 -12 D
+-48 -36 D
+-16 -11 D
+-17 -11 D
+-16 -11 D
+-17 -11 D
+-68 -40 D
+-34 -18 D
+-36 -18 D
+-17 -9 D
+-72 -32 D
+-19 -7 D
+-18 -7 D
+-19 -7 D
+-18 -7 D
+-19 -6 D
+-18 -7 D
+-38 -12 D
+-19 -5 D
+-19 -6 D
+-57 -15 D
+-20 -4 D
+-19 -4 D
+-19 -5 D
+-20 -3 D
+-19 -4 D
+-20 -4 D
+-19 -3 D
+-40 -6 D
+-19 -3 D
+-60 -6 D
+-19 -2 D
+-20 -2 D
+-100 -5 D
+-100 0 D
+-100 5 D
+-20 2 D
+-19 1 D
+-24 2 D
+-20 3 D
+-20 2 D
+-19 3 D
+-80 12 D
+-19 4 D
+-40 8 D
+-19 4 D
+-20 4 D
+-19 5 D
+-20 5 D
+-38 10 D
+-20 5 D
+-19 6 D
+-19 5 D
+-38 12 D
+-19 7 D
+-19 6 D
+-57 21 D
+-18 7 D
+-19 7 D
+-18 8 D
+-19 7 D
+-18 8 D
+-18 9 D
+-36 16 D
+-54 27 D
+-17 9 D
+-18 10 D
+-17 9 D
+-68 40 D
+-34 22 D
+-16 10 D
+-17 11 D
+-16 12 D
+-16 11 D
+-16 12 D
+-16 11 D
+-16 12 D
+-15 13 D
+-16 12 D
+-15 12 D
+-60 52 D
+-14 13 D
+-14 14 D
+-15 14 D
+-13 14 D
+-28 28 D
+-13 14 D
+-13 15 D
+-14 15 D
+-12 15 D
+-13 15 D
+-12 15 D
+-13 16 D
+-12 15 D
+-11 16 D
+-12 16 D
+-11 16 D
+-12 17 D
+-10 16 D
+-22 34 D
+-20 34 D
+-9 18 D
+-10 18 D
+-9 17 D
+-18 36 D
+-8 19 D
+-8 18 D
+-16 38 D
+-14 38 D
+-7 20 D
+-6 19 D
+ S
+S 27 W
+-338 -755 M V 2.96e-323 R 106 F0 (+) Z U
+S 1 W
+-390 1071 M
+11 4 D
+10 4 D
+11 5 D
+10 4 D
+11 5 D
+10 5 D
+10 4 D
+10 6 D
+9 5 D
+10 5 D
+10 6 D
+36 24 D
+16 12 D
+9 7 D
+7 6 D
+8 7 D
+28 28 D
+18 21 D
+5 8 D
+10 14 D
+4 8 D
+4 7 D
+4 8 D
+3 7 D
+6 16 D
+2 7 D
+2 8 D
+2 7 D
+1 8 D
+0 7 D
+1 8 D
+0 7 D
+-1 7 D
+-1 8 D
+-1 7 D
+-4 14 D
+-6 14 D
+-4 6 D
+-4 7 D
+-4 6 D
+-5 7 D
+-5 6 D
+-6 6 D
+-6 5 D
+-7 6 D
+-14 10 D
+-16 10 D
+-9 4 D
+-9 5 D
+-9 3 D
+ S
+232 -1480 M
+8 7 D
+18 12 D
+10 6 D
+9 6 D
+40 24 D
+22 12 D
+11 5 D
+11 6 D
+11 5 D
+11 6 D
+12 5 D
+11 5 D
+12 6 D
+24 10 D
+12 4 D
+24 10 D
+12 4 D
+12 5 D
+13 4 D
+24 8 D
+13 4 D
+12 4 D
+12 3 D
+12 4 D
+13 3 D
+48 12 D
+12 2 D
+12 3 D
+12 2 D
+11 2 D
+12 2 D
+11 1 D
+11 2 D
+33 3 D
+10 0 D
+ S
+-781 1277 M
+-4 -9 D
+-5 -9 D
+-3 -8 D
+-4 -9 D
+-3 -9 D
+-2 -9 D
+-2 -8 D
+-1 -9 D
+-2 -16 D
+0 -16 D
+2 -16 D
+6 -21 D
+6 -14 D
+12 -18 D
+10 -12 D
+5 -5 D
+12 -10 D
+6 -4 D
+7 -5 D
+6 -4 D
+8 -4 D
+7 -3 D
+8 -4 D
+16 -6 D
+8 -2 D
+9 -3 D
+18 -4 D
+9 -1 D
+9 -2 D
+10 -1 D
+9 -1 D
+10 -1 D
+51 0 D
+22 2 D
+10 1 D
+11 1 D
+33 6 D
+10 2 D
+11 2 D
+44 12 D
+11 4 D
+10 3 D
+11 4 D
+ S
+-733 873 M
+9 8 D
+9 7 D
+8 8 D
+8 7 D
+24 24 D
+7 9 D
+8 8 D
+7 8 D
+14 18 D
+6 8 D
+7 9 D
+6 9 D
+6 8 D
+5 9 D
+6 9 D
+10 18 D
+8 18 D
+5 8 D
+3 9 D
+4 9 D
+6 18 D
+2 8 D
+3 9 D
+1 9 D
+2 8 D
+1 9 D
+2 16 D
+0 16 D
+-1 8 D
+0 8 D
+-2 8 D
+-1 7 D
+-4 14 D
+-6 14 D
+-4 6 D
+-3 7 D
+-4 6 D
+-5 6 D
+-5 5 D
+-5 6 D
+-6 5 D
+-6 4 D
+-6 5 D
+-21 12 D
+-24 9 D
+-18 4 D
+-9 1 D
+-10 2 D
+-10 0 D
+-10 1 D
+ S
+-724 1311 M
+-6 -9 D
+-6 -9 D
+-6 -8 D
+-21 -27 D
+-7 -10 D
+-8 -9 D
+-7 -9 D
+-8 -9 D
+-9 -9 D
+-16 -18 D
+-45 -45 D
+-10 -8 D
+-9 -9 D
+-10 -9 D
+-9 -8 D
+-10 -9 D
+-20 -16 D
+-10 -9 D
+-10 -8 D
+-11 -8 D
+-10 -8 D
+-10 -7 D
+-10 -8 D
+-11 -7 D
+-10 -8 D
+-11 -7 D
+-20 -14 D
+-11 -6 D
+-10 -7 D
+-10 -6 D
+-11 -6 D
+-10 -6 D
+-10 -5 D
+-10 -6 D
+-30 -15 D
+-20 -8 D
+ S
+-1171 933 M
+-1 -10 D
+-1 -10 D
+0 -28 D
+2 -18 D
+1 -8 D
+2 -8 D
+3 -8 D
+2 -8 D
+3 -7 D
+4 -7 D
+3 -7 D
+4 -6 D
+5 -6 D
+4 -6 D
+5 -5 D
+5 -6 D
+6 -4 D
+6 -5 D
+12 -8 D
+7 -3 D
+7 -4 D
+7 -2 D
+7 -3 D
+7 -2 D
+8 -2 D
+8 -1 D
+8 -2 D
+8 0 D
+9 -1 D
+26 0 D
+27 3 D
+18 4 D
+10 2 D
+9 2 D
+10 3 D
+9 3 D
+10 3 D
+9 4 D
+20 8 D
+9 4 D
+10 4 D
+10 5 D
+9 5 D
+10 5 D
+9 6 D
+10 5 D
+9 6 D
+10 6 D
+9 6 D
+9 7 D
+10 6 D
+27 21 D
+8 7 D
+ S
+-365 -996 M
+9 -12 D
+7 -11 D
+8 -10 D
+7 -10 D
+8 -10 D
+7 -9 D
+6 -8 D
+7 -9 D
+6 -8 D
+6 -7 D
+7 -8 D
+6 -7 D
+5 -7 D
+12 -14 D
+5 -6 D
+6 -6 D
+5 -7 D
+6 -6 D
+5 -6 D
+6 -5 D
+10 -12 D
+11 -11 D
+5 -6 D
+6 -5 D
+5 -6 D
+16 -16 D
+6 -5 D
+17 -17 D
+6 -5 D
+12 -12 D
+7 -5 D
+6 -6 D
+28 -24 D
+8 -7 D
+8 -6 D
+8 -7 D
+8 -6 D
+9 -7 D
+10 -8 D
+9 -7 D
+11 -8 D
+11 -7 D
+11 -9 D
+ S
+-1217 0 M
+-126 237 D
+-1500 2100 M V 2.96e-323 R 222 F0 (All of Onnet
+) Z U
+%%Trailer
+% Reset translations and scale and call showpage
+S -1800 -1800 T 10.5833 10.5833 scale showpage
+
+end
